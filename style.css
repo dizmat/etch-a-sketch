@@ -1,0 +1,80 @@
+/* body {
+	margin: 0;
+	height: 100vh;
+	display: flex;
+    flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.container {
+	align-self: center;
+	width: 500px;
+	height: 500px;
+	border: 1px solid black;
+}
+
+.box {
+	width: 25px;
+	height: 25px;
+	background-color: gray;
+	border-top: 1px solid black;
+}
+
+.title {
+} */
+
+body {
+    display: flex;
+	flex-direction: column;
+	height: 100vh;
+	margin: 0px;
+}
+
+.title {
+	flex: 1;
+    display: flex;
+	background-color: gray;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.options-sketch-container {
+	flex: 10;
+	background-color: lightgray;
+	width: 100vw;
+	text-align: center;
+    display: flex;
+}
+
+.options {
+    background-color: lightyellow;
+    flex: 1;
+    height: 100%;
+}
+
+.sketchpad {
+    background-color: yellow;
+    flex: 3;
+    height: 100%;
+}
+
+.interaction-panel {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
+	padding-top: 10px;
+}
+
+.sketchpad {
+	display: flex;
+	padding-top: 100px;
+	padding-left: 100px;
+	box-sizing: border-box;
+}
+.drawing-box {
+	height: 750px;
+	width: 750px;
+	border: 1px solid black;
+}
