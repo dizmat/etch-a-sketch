@@ -1,30 +1,8 @@
-/* body {
-	margin: 0;
-	height: 100vh;
-	display: flex;
-    flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-.container {
-	align-self: center;
-	width: 500px;
-	height: 500px;
-	border: 1px solid black;
-}
-
-.box {
-	width: 25px;
-	height: 25px;
-	background-color: gray;
-	border-top: 1px solid black;
-}
-
-.title {
-} */
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,900,900italic&subset=latin,latin-ext,cyrillic,cyrillic-ext,greek-ext,greek,vietnamese);
 
 body {
-    display: flex;
+	font-family: Roboto, sans-serif;
+	display: flex;
 	flex-direction: column;
 	height: 100vh;
 	margin: 0px;
@@ -32,11 +10,11 @@ body {
 
 .title {
 	flex: 1;
-    display: flex;
+	display: flex;
 	background-color: gray;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 50px;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 50px;
 }
 
 .options-sketch-container {
@@ -44,19 +22,19 @@ body {
 	background-color: lightgray;
 	width: 100vw;
 	text-align: center;
-    display: flex;
+	display: flex;
 }
 
 .options {
-    background-color: lightyellow;
-    flex: 1;
-    height: 100%;
+	background-color: lightyellow;
+	flex: 1;
+	height: 100%;
 }
 
 .sketchpad {
-    background-color: yellow;
-    flex: 3;
-    height: 100%;
+	/* background-color: rgb(255, 255, 105); */
+	flex: 3;
+	height: 100%;
 }
 
 .interaction-panel {
@@ -74,7 +52,24 @@ body {
 	box-sizing: border-box;
 }
 .drawing-box {
-	height: 750px;
-	width: 750px;
+	display: flex;
+	flex-wrap: wrap;
+	height: 650px;
+	width: 650px;
 	border: 1px solid black;
+	border-right: none;
+	border-top: none;
+	box-shadow: 0 0 5px #000;
+}
+
+footer {
+	text-align: center;
+	padding: 20px 0px;
+}
+
+.square {
+	aspect-ratio: 1/1;
+	box-sizing: border-box;
+	border-top: 1px solid black;
+	border-right: 1px solid black;
 }
