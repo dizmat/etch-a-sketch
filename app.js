@@ -1,28 +1,39 @@
-let gridSize = 24;
+let gridSize = 16;
+let drawingBox = document.querySelector('.drawing-box');
+drawingBox.setAttribute(
+	'style',
+	`grid-template-columns: repeat(${gridSize}, 1fr`
+);
+
+let isDrawing = false;
 
 for (let i = 0; i < gridSize * gridSize; i++) {
-	let square = document.createElement('div');
-	square.className = 'square';
-	let width = (1 / gridSize) * 650;
-	width = width + 'px';
-	square.style.width = width;
+	let cell = document.createElement('div');
+	cell.className = 'cell';
 
-	mouseIsDown = false;
-	square.addEventListener('mousedown', function () {
-		mouseIsDown = true;
-	});
-	square.addEventListener('mouseup', function () {
-		mouseIsDown = false;
+	cell.addEventListener('mousedown', () => {
+		isDrawing = true;
+		cell.style.background = 'black';
+		cell.style.outline = '1px solid white';
 	});
 
-	square.addEventListener('mouseenter', function () {
-		if (mouseIsDown) {
-			this.style.backgroundColor = '#000';
+	cell.addEventListener('mousemove', () => {
+		if (isDrawing) {
+			cell.style.background = 'black';
+			cell.style.outline = '1px solid white';
 		}
 	});
-	square.addEventListener('click', function () {
-        this.style.backgroundColor = '#000';
+
+	cell.addEventListener('mouseup', () => {
+		isDrawing = false;
 	});
 
-	document.querySelector('.drawing-box').appendChild(square);
+	drawingBox.appendChild(cell);
 }
+
+// TODO: Fix first clicked square not working.
+// TODO: Implement buttons for: Clear grid, Toggle grid, Colour mode (rainbow, solid), eraser
+// TODO: Colour picker with potential random colour chooser (slot machine psychology)
+// TODO: Grid size slider
+// TODO: Hover effect when you are not drawing but the mouse is on the sketchpad
+// TODO: Secret button or easter egg button with something goofy like what the dog doing (please oh god no)
