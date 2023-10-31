@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,900,900italic&subset=latin,latin-ext,cyrillic,cyrillic-ext,greek-ext,greek,vietnamese);
 
+:root {
+	--grid-border: 1px solid black;
+}
+
 body {
 	font-family: Roboto, sans-serif;
 	display: flex;
@@ -31,12 +35,6 @@ body {
 	height: 100%;
 }
 
-.sketchpad {
-	/* background-color: rgb(255, 255, 105); */
-	flex: 3;
-	height: 100%;
-}
-
 .interaction-panel {
 	display: flex;
 	flex-direction: column;
@@ -45,31 +43,38 @@ body {
 	padding-top: 10px;
 }
 
-.sketchpad {
-	display: flex;
-	padding-top: 100px;
-	padding-left: 100px;
-	box-sizing: border-box;
-}
-.drawing-box {
-	display: flex;
-	flex-wrap: wrap;
-	height: 650px;
-	width: 650px;
-	border: 1px solid black;
-	border-right: none;
-	border-top: none;
-	box-shadow: 0 0 5px #000;
-}
-
 footer {
 	text-align: center;
 	padding: 20px 0px;
 }
 
-.square {
-	aspect-ratio: 1/1;
+.sketchpad {
+	display: grid;
 	box-sizing: border-box;
-	border-top: 1px solid black;
-	border-right: 1px solid black;
+	background-color: rgb(255, 255, 105);
+	flex: 3;
+	height: 100%;
 }
+
+.drawing-box {
+	display: grid;
+	width: 650px;
+	height: 650px;
+	margin: 100px 0 0 100px;
+	grid-gap: 1px;
+}
+
+.cell {
+	outline: 1px solid black;
+}
+
+/* 
+TODO: Stylise buttons with icons (legal assets)
+TODO: Stylize slider to something modern
+TODO: Japanese cherry blossom 8bit theme. The goal is to make something that stands out instead of 'just doing the job'. The theme should be something that you like if you're not going for cherry blossom theme. Gots to figure out how to make background not look pixelated when on large screens.
+TODO: Top navbar with links to all other Tamzid Zakaria github projects (projects that you are proud of)
+TODO: Website icon
+TODO: Either random name generator or a better name
+TODO: Dabble in animations
+TODO: Dark mode toggle 
+*/
