@@ -49,24 +49,39 @@ footer {
 }
 
 .sketchpad {
-	display: grid;
+	display: flex;
 	box-sizing: border-box;
 	background-color: rgb(255, 255, 105);
 	flex: 3;
 	height: 100%;
+	align-items: center;
+	justify-content: center;
 }
 
 .drawing-box {
 	display: grid;
 	width: 650px;
 	height: 650px;
-	margin: 100px 0 0 100px;
-	grid-gap: 1px;
+	outline: var(--grid-border);
+	background-color: white;
 }
 
 .cell {
 	outline: 1px solid black;
+	background-color: white;
 }
+
+.cell:hover {
+	background-color: lightgray;
+}
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
 
 /* 
 TODO: Stylise buttons with icons (legal assets)
@@ -77,4 +92,5 @@ TODO: Website icon
 TODO: Either random name generator or a better name
 TODO: Dabble in animations
 TODO: Dark mode toggle 
+TODO: Sketchpad should be center of page not center of sketchpad class
 */

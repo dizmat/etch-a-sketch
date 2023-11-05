@@ -13,17 +13,29 @@
 				<div>Options</div>
 				<div class="interaction-panel">
 					<input type="button" value="Color" />
-					<input type="button" value="Color" />
+					<input id="toggle" type="button" value="Toggle Grid" />
 					<input id="clear" type="button" value="Clear" />
+					<label class="eraser-switch">
+						<input type="checkbox" name="toggle eraser"/>
+					</label>
 					<div>
-						<input type="range" name="size" min="1" max="10">
+						<input
+							id="range"
+							type="range"
+							name="size"
+							min="1"
+							max="24"
+							step="1"
+							value="16"
+							oninput="rangeValue.innerText = this.value"
+						/>
 						<label for="size">Size</label>
+						<p id="rangeValue">16</p>
 					</div>
 				</div>
 			</div>
 			<div class="sketchpad">
-				<div class="drawing-box">
-				</div>
+				<div class="drawing-box"></div>
 			</div>
 		</div>
 	</body>
